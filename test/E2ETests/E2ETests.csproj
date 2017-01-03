@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <WarningsAsErrors>true</WarningsAsErrors>
-    <AssemblyName>E2ETests</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp1.1</TargetFramework>
+		
+   
     <UserSecretsId>MusicStore.E2ETests</UserSecretsId>
-    <RuntimeIdentifiers>win7-x86;win7-x64;osx.10.10-x64;osx.10.11-x64;ubuntu.14.04-x64;ubuntu.14.10-x64;ubuntu.15.04-x64;ubuntu.16.04-x64;centos.7-x64;debian.8-x64</RuntimeIdentifiers>
+   
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**\*.cs" />
@@ -33,10 +34,5 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0-msbuild1-final" />
   </ItemGroup>
-  <PropertyGroup Label="Configuration">
-    <PlatformTarget />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
-  </PropertyGroup>
+ 
 </Project>
